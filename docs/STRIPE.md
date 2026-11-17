@@ -29,6 +29,8 @@ stripe listen --forward-to localhost:8000/api/billing/stripe-webhook/
 It prints `whsec_...`. Use the port your Django server really runs on.
 (The upgrade also happens without this: after paying, the billing page calls `/billing/sync/` to pull the plan from Stripe. The webhook keeps it in sync for renewals, failed payments and cancellations.)
 
+STRIPE_PRICE_PRO=price_1Ucn3BJz4pvDorRqwW2DMqSF
+STRIPE_PRICE_BUSINESS=price_1Ucn3CJz4pvDorRqBxahH1tm
 ## 5. Run the backend with the keys
 ```powershell
 $env:STRIPE_SECRET_KEY="sk_test_..."

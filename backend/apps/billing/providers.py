@@ -12,6 +12,11 @@ from rest_framework.exceptions import ValidationError
 from . import plans
 
 
+def _plain(obj):
+    """Stripe SDK objects -> plain dicts (tests and webhooks already use dicts)."""
+    return obj.to_dict() if hasattr(obj, "to_dict") else obj
+
+
 class BaseProvider:
     mode = "base"
 
@@ -103,7 +108,9 @@ class StripeProvider(BaseProvider):
     def latest_subscription(self, workspace):
         if not workspace.stripe_customer_id:
             return None
-        subs = self._call(self.stripe.Subscription.list, customer=workspace.stripe_customer_id, status="all", limit=10).get("data", [])
+        listing = self._call(self.stripe.Subscription.list, customer=workspace.stripe_customer_id, status="all", limit=10)
+        # Stripe objects are not dicts (no .get); convert to plain dicts for the rest of the app.
+        subs = [_plain(x) for x in (listing["data"] if "data" in listing else [])]
         # Stripe returns newest first: prefer a live subscription, otherwise report the latest state (e.g. canceled).
         live = [x for x in subs if x.get("status") in ("active", "trialing")]
         return (live or subs or [None])[0]

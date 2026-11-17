@@ -17,7 +17,7 @@ def ensure_prices(stripe):
     out = {}
     for key, (name, cents) in PLANS.items():
         lookup = f"taskflow_{key}_monthly"
-        found = stripe.Price.list(lookup_keys=[lookup], limit=1).get("data", [])
+        found = stripe.Price.list(lookup_keys=[lookup], limit=1).data
         if found:
             out[key] = found[0]["id"]
             continue

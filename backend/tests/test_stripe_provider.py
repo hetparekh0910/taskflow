@@ -51,7 +51,8 @@ class FakeStripe:
             @staticmethod
             def list(**kw):
                 outer.calls.append(("Subscription.list", kw))
-                return {"data": outer.subs}
+                import stripe as real
+                return real.convert_to_stripe_object({"object": "list", "data": outer.subs, "has_more": False})
 
             @staticmethod
             def cancel(sid):
@@ -207,7 +208,8 @@ def test_stripe_setup_script_is_idempotent():
     class Price:
         @staticmethod
         def list(lookup_keys, limit):
-            return {"data": [prices[k] for k in lookup_keys if k in prices]}
+            import stripe as real
+            return real.convert_to_stripe_object({"object": "list", "data": [prices[k] for k in lookup_keys if k in prices], "has_more": False})
 
         @staticmethod
         def create(product, unit_amount, currency, recurring, lookup_key, metadata):
