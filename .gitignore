@@ -1,0 +1,23 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+backend/db.sqlite3*
+backend/media/
+backend/staticfiles/
+.pytest_cache/
+.coverage
+coverage.xml
+test-results.xml
+# node
+node_modules/
+frontend/dist/
+# env + secrets
+.env
+*.pem
+# editor / os
+.DS_Store
+.idea/
+.vscode/
+# local load-test scratch (keep results_stats.csv)
+loadtest/__pycache__/
