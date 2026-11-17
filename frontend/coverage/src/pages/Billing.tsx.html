@@ -1,0 +1,333 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/pages/Billing.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../../theme.js"></script>
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        
+        <label class="theme-select quiet">
+            Theme
+            <select id="themeSelect" autocomplete="off">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="legacy">Legacy</option>
+            </select>
+        </label>
+
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/pages</a> Billing.tsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/68</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/53</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/26</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/33</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useEffect, useState } from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { api } from '../api/client'
+import type { Billing as B, PlanSpec } from '../api/types'
+import { Button, ConfirmButton, ErrorBox, Loading, Meter, errMsg, useToast } from '../components/ui'
+import { useWs } from '../layout/WorkspaceContext'
+&nbsp;
+const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >lim = (n</span>: number | null, unit = <span class="branch-0 cbranch-no" title="branch not covered" >'') =&gt; (<span class="cstat-no" title="statement not covered" >n</span> === null ? 'Unlimited' : `${n.toLocaleString()}${unit}`)</span></span>
+const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >storage = (m</span>b: number | null) =&gt; (<span class="cstat-no" title="statement not covered" >mb === null ? 'Unlimited' : mb &gt;= 1024 ? `${mb / 1024} GB` : `${mb} MB`)</span></span>
+&nbsp;
+export default function <span class="fstat-no" title="function not covered" >Billing() {</span>
+  const { p, slug, can } = <span class="cstat-no" title="statement not covered" >useWs()</span>
+  const qc = <span class="cstat-no" title="statement not covered" >useQueryClient()</span>; const toast = <span class="cstat-no" title="statement not covered" >useToast()</span>; const [sp, setSp] = <span class="cstat-no" title="statement not covered" >useSearchParams()</span>
+  const q = <span class="cstat-no" title="statement not covered" >useQuery({ queryKey: ['billing', slug], <span class="fstat-no" title="function not covered" >queryFn: () =&gt; <span class="cstat-no" title="statement not covered" >a</span>pi&lt;B&gt;(p('/billing/')) }</span>)</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span></span>
+    const c = <span class="cstat-no" title="statement not covered" >sp.get('checkout')</span>
+<span class="cstat-no" title="statement not covered" >    if (c) { <span class="cstat-no" title="statement not covered" >toast(c === 'success' ? 'Payment received. Your plan will update in a moment.' : 'Checkout cancelled', c !== 'success'); <span class="cstat-no" title="statement not covered" >s</span>etSp({}, { replace: true }); <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >s</span>etTimeout(() =&gt; <span class="cstat-no" title="statement not covered" >q</span>c.invalidateQueries(), 1</span>500) }</span></span>
+  }, [])
+  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >refresh = () =&gt; {</span> <span class="cstat-no" title="statement not covered" >qc.invalidateQueries({ queryKey: ['billing'] }); <span class="cstat-no" title="statement not covered" >q</span>c.invalidateQueries({ queryKey: ['ws'] }); <span class="cstat-no" title="statement not covered" >q</span>c.invalidateQueries({ queryKey: ['workspaces'] }) }</span></span>
+  const checkout = <span class="cstat-no" title="statement not covered" >useMutation({ <span class="fstat-no" title="function not covered" >mutationFn: (p</span>lan: string) =&gt; <span class="cstat-no" title="statement not covered" >api&lt;{ url: string }&gt;(p('/billing/checkout/'), { method: 'POST', body: { plan } }), <span class="fstat-no" title="function not covered" >o</span>nSuccess: (r</span>) =&gt; { <span class="cstat-no" title="statement not covered" >window.location.href = r.url }</span>, <span class="fstat-no" title="function not covered" >onError: (e</span>) =&gt; <span class="cstat-no" title="statement not covered" >toast(errMsg(e), true) }</span>)</span>
+  const portal = <span class="cstat-no" title="statement not covered" >useMutation({ <span class="fstat-no" title="function not covered" >mutationFn: () =&gt; <span class="cstat-no" title="statement not covered" >a</span>pi&lt;{ url: string }&gt;(p('/billing/portal/'), { method: 'POST' }), <span class="fstat-no" title="function not covered" >o</span>nSuccess: (r</span>) =&gt; { <span class="cstat-no" title="statement not covered" >window.location.href = r.url }</span>, <span class="fstat-no" title="function not covered" >onError: (e</span>) =&gt; <span class="cstat-no" title="statement not covered" >toast(errMsg(e), true) }</span>)</span>
+  const cancel = <span class="cstat-no" title="statement not covered" >useMutation({ <span class="fstat-no" title="function not covered" >mutationFn: () =&gt; <span class="cstat-no" title="statement not covered" >a</span>pi(p('/billing/cancel/'), { method: 'POST' }), <span class="fstat-no" title="function not covered" >o</span>nSuccess: () =&gt; {</span> <span class="cstat-no" title="statement not covered" >toast('Subscription cancelled'); <span class="cstat-no" title="statement not covered" >r</span>efresh() }</span>, <span class="fstat-no" title="function not covered" >onError: (e</span>) =&gt; <span class="cstat-no" title="statement not covered" >toast(errMsg(e), true) }</span>)</span>
+<span class="cstat-no" title="statement not covered" >  if (q.isLoading) <span class="cstat-no" title="statement not covered" >return &lt;Loading /&gt;</span></span>
+<span class="cstat-no" title="statement not covered" >  if (q.error || !q.data) <span class="cstat-no" title="statement not covered" >return &lt;ErrorBox error={q.error} /&gt;</span></span>
+  const b = <span class="cstat-no" title="statement not covered" >q.data</span>
+  const order = <span class="cstat-no" title="statement not covered" >['free', 'pro', 'business']</span>
+  const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >feats = (s</span>: PlanSpec) =&gt; <span class="cstat-no" title="statement not covered" >[`${lim(s.max_members)} members`, `${lim(s.max_projects)} projects`, `${storage(s.max_storage_mb)} file storage`, s.webhooks ? 'Webhooks &amp; API events' : 'No webhooks', `Audit log${s.audit_log_days ? `: ${s.audit_log_days} days` : ': unlimited retention'}`]</span></span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;&gt;
+      &lt;div className="page-head"&gt;&lt;div&gt;&lt;h1&gt;Billing &amp;amp; plan&lt;/h1&gt;&lt;div className="muted"&gt;Current plan: &lt;strong style={{ textTransform: 'capitalize' }}&gt;{b.plan}&lt;/strong&gt; {b.subscription_status &amp;&amp; &lt;span className={`badge ${b.subscription_status === 'active' ? 'success' : 'warn'}`}&gt;{b.subscription_status.replace('_', ' ')}&lt;/span&gt;}&lt;/div&gt;&lt;/div&gt;
+        {b.mode === 'mock' &amp;&amp; &lt;span className="badge warn" title="No Stripe keys configured; checkout is simulated"&gt;Test mode: simulated payments&lt;/span&gt;}&lt;/div&gt;
+      &lt;div className="card pad col gap-12" style={{ marginBottom: 16 }}&gt;&lt;h3&gt;Usage vs plan limits&lt;/h3&gt;
+        &lt;Meter label="Members (incl. pending invites)" used={b.usage.members + b.usage.pending_invites} limit={b.limits.max_members} /&gt;
+        &lt;Meter label="Projects" used={b.usage.projects} limit={b.limits.max_projects} /&gt;
+        &lt;Meter label="Storage" used={b.usage.storage_mb} limit={b.limits.max_storage_mb} unit=" MB" /&gt;&lt;/div&gt;
+      &lt;div className="plans"&gt;
+        {b.plans.<span class="fstat-no" title="function not covered" >sort((a</span>, c) =&gt; <span class="cstat-no" title="statement not covered" >order.indexOf(a.key) - order.indexOf(c.key))</span>.<span class="fstat-no" title="function not covered" >map((s</span>) =&gt; {
+          const current = <span class="cstat-no" title="statement not covered" >s.key === b.plan; c</span>onst up = <span class="cstat-no" title="statement not covered" >order.indexOf(s.key) &gt; order.indexOf(b.plan)</span>
+<span class="cstat-no" title="statement not covered" >          return (</span>
+            &lt;div key={s.key} className={`card plan ${current ? 'current' : ''}`}&gt;
+              &lt;div className="row spread"&gt;&lt;h2&gt;{s.name}&lt;/h2&gt;{current &amp;&amp; &lt;span className="badge accent"&gt;Current&lt;/span&gt;}&lt;/div&gt;
+              &lt;div className="price"&gt;${s.price_usd}&lt;span className="small muted"&gt; /month&lt;/span&gt;&lt;/div&gt;
+              &lt;ul&gt;{feats(s).<span class="fstat-no" title="function not covered" >map((f</span>) =&gt; <span class="cstat-no" title="statement not covered" >&lt;li key={f}&gt;{f}&lt;/li&gt;)</span>}&lt;/ul&gt;
+              &lt;div style={{ marginTop: 'auto' }}&gt;
+                {current ? &lt;Button disabled style={{ width: '100%' }}&gt;Your plan&lt;/Button&gt;
+                  : up ? &lt;Button variant="primary" style={{ width: '100%' }} disabled={!b.can_manage || checkout.isPending} title={!b.can_manage ? 'Only the owner can change the plan' : ''} <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >c</span>heckout.mutate(s.key)}&gt;U</span>pgrade to {s.name}&lt;/Button&gt;
+                    : s.key === 'free' &amp;&amp; b.plan !== 'free' ? &lt;ConfirmButton style={{ width: '100%' }} disabled={!b.can_manage} message="Cancel your subscription and return to Free? Limits apply immediately for new items." <span class="fstat-no" title="function not covered" >onConfirm={() =&gt; <span class="cstat-no" title="statement not covered" >c</span>ancel.mutate()}&gt;D</span>owngrade to Free&lt;/ConfirmButton&gt;
+                      : &lt;Button disabled style={{ width: '100%' }}&gt;Contact owner&lt;/Button&gt;}
+              &lt;/div&gt;&lt;/div&gt;)})}
+      &lt;/div&gt;
+      {b.can_manage &amp;&amp; b.mode === 'stripe' &amp;&amp; b.plan !== 'free' &amp;&amp; &lt;div style={{ marginTop: 16 }}&gt;&lt;Button <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >p</span>ortal.mutate()}&gt;M</span>anage payment method &amp;amp; invoices&lt;/Button&gt;&lt;/div&gt;}
+      {!can('owner') &amp;&amp; &lt;div className="small muted" style={{ marginTop: 12 }}&gt;Only the workspace owner can change the plan.&lt;/div&gt;}
+    &lt;/&gt;
+  )
+}
+&nbsp;
+/** Stand-in for Stripe Checkout, used only when no Stripe keys are configured. */
+export function <span class="fstat-no" title="function not covered" >MockCheckout() {</span>
+  const [sp] = <span class="cstat-no" title="statement not covered" >useSearchParams()</span>; const nav = <span class="cstat-no" title="statement not covered" >useNavigate()</span>; const { p, slug } = <span class="cstat-no" title="statement not covered" >useWs()</span>; const qc = <span class="cstat-no" title="statement not covered" >useQueryClient()</span>; const toast = <span class="cstat-no" title="statement not covered" >useToast()</span>
+  const plan = <span class="cstat-no" title="statement not covered" >sp.get('plan') ?? 'pro'</span>
+  const [busy, setBusy] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
+  async function <span class="fstat-no" title="function not covered" >pay() {</span>
+<span class="cstat-no" title="statement not covered" >    setBusy(true)</span>
+<span class="cstat-no" title="statement not covered" >    try { <span class="cstat-no" title="statement not covered" >await api(p('/billing/mock/confirm/'), { method: 'POST', body: { plan } }); <span class="cstat-no" title="statement not covered" >q</span>c.invalidateQueries(); <span class="cstat-no" title="statement not covered" >t</span>oast(`Upgraded to ${plan}`); <span class="cstat-no" title="statement not covered" >n</span>av(`/w/${slug}/billing`) }</span></span>
+    catch (e) { <span class="cstat-no" title="statement not covered" >toast(errMsg(e), true) }</span> finally { <span class="cstat-no" title="statement not covered" >setBusy(false) }</span>
+  }
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;div className="center"&gt;&lt;div className="card pad col gap-12" style={{ width: 400 }}&gt;
+      &lt;span className="badge warn" style={{ alignSelf: 'flex-start' }}&gt;Simulated checkout (test mode)&lt;/span&gt;
+      &lt;h2&gt;Subscribe to {plan[0].toUpperCase() + plan.slice(1)}&lt;/h2&gt;
+      &lt;div className="muted"&gt;This mimics Stripe Checkout. With real test keys set on the server, you'd be redirected to Stripe instead. Use card &lt;span className="mono"&gt;4242 4242 4242 4242&lt;/span&gt; there.&lt;/div&gt;
+      &lt;input className="input mono" defaultValue="4242 4242 4242 4242" readOnly aria-label="Card number" /&gt;
+      &lt;div className="row"&gt;&lt;input className="input mono" defaultValue="12 / 34" readOnly /&gt;&lt;input className="input mono" defaultValue="123" readOnly /&gt;&lt;/div&gt;
+      &lt;Button variant="primary" disabled={busy} onClick={pay}&gt;{busy ? 'Processing…' : 'Pay now'}&lt;/Button&gt;
+      &lt;Button variant="ghost" <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >n</span>av(`/w/${slug}/billing`)}&gt;C</span>ancel&lt;/Button&gt;
+    &lt;/div&gt;&lt;/div&gt;
+  )
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-11-16T13:31:34.748Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    
