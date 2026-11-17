@@ -1,0 +1,2 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,GET /projects/:id/board,"ConnectionResetError(104, 'Connection reset by peer')",1,2026-11-14T07:39:21Z,2026-11-14T07:39:21Z
