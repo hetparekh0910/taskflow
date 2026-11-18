@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends libpq5 && rm -r
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
+# Windows checkouts can drop the executable bit or add CRLF line endings; make the entrypoint robust.
+RUN sed -i 's/\r$//' entrypoint.sh && chmod +x entrypoint.sh
 RUN useradd -m app && mkdir -p /app/media /app/staticfiles && chown -R app /app
 USER app
 ENV DEBUG=0 MEDIA_ROOT=/app/media
