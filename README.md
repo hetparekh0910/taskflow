@@ -6,7 +6,7 @@ A Jira-style product where every company gets its own isolated workspace with Ka
 
 | | |
 |---|---|
-| Live demo | _add your Vercel URL here after deploying (see [docs/DEPLOY.md](docs/DEPLOY.md))_ |
+| Live demo | https://taskflow-five-lac.vercel.app |
 | API docs | `/api/docs/` (Swagger) · `/api/redoc/` |
 | Architecture | [docs/architecture.md](docs/architecture.md) |
 | Test results | [docs/test-results.md](docs/test-results.md) |
