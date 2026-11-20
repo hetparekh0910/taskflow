@@ -1,4 +1,4 @@
-# Deploying TaskFlow (beginner-friendly)
+# Deploying TaskFlow 
 
 You already know how to host a static site on Vercel. This is the same idea plus one backend service.
 
@@ -33,7 +33,7 @@ Back in Render → your service → **Environment**, set all three to your Verce
 Open the Vercel URL and sign in with `alice@acme.test` / `demo12345`.
 
 ## Step 4 — CI/CD (GitHub Actions)
-- `ci.yml` runs automatically on every push and PR: migrations check, 86 tests against PostgreSQL, TypeScript build, Docker image builds, and a full-stack smoke test.
+- `ci.yml` runs automatically on every push and PR: migrations check, 98 on backend , 48 on Frontend tests against PostgreSQL, TypeScript build, Docker image builds, and a full-stack smoke test.
 - `deploy.yml` runs after CI succeeds on `main`. It publishes container images to GitHub Container Registry and can trigger Render:
   - Render service → **Settings → Deploy Hook** → copy the URL → GitHub repo → **Settings → Secrets → Actions** → add `RENDER_DEPLOY_HOOK_URL`.
   - Optionally add a repository variable `API_URL` (your Render URL) so the workflow waits for `/health/`.
