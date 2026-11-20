@@ -33,7 +33,7 @@ A Jira-style product where every company gets its own isolated workspace with Ka
 - **Billing**: Free / Pro / Business plans with enforced limits (members, projects, storage, webhooks) returned as structured `402` responses that drive an upgrade prompt. Stripe Checkout, Customer Portal and idempotent signature-verified webhooks, plus a **mock provider** so everything works with no Stripe account.
 - In-app notifications, dashboard (status mix, created-vs-resolved flow, velocity, workload), weekly report.
 
-## Run it locally (no Docker needed)
+## Run it locally 
 
 Requires Python 3.12+ and Node 20+.
 
